@@ -1,0 +1,137 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BASE ================= */
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #2a2a2a 0%, #000 65%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trade Winds', cursive;
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Spotlight fitness */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.08),
+        transparent 60%
+    );
+    pointer-events: none;
+}
+
+/* ================= TITRE ================= */
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+/* ================= BOUTON ================= */
+.btn {
+    display: inline-block;
+    background: #111;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 16px 42px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.2s ease;
+    z-index: 1;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* =================================================
+   MEDIA QUERIES
+   ================================================= */
+
+/* ===== Desktop large (≥ 1200px) ===== */
+@media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        padding: 18px 50px;
+    }
+}
+
+/* ===== Laptop / Desktop (992px → 1199px) ===== */
+@media screen and (max-width: 1199px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* ===== Tablette (768px → 991px) ===== */
+@media screen and (max-width: 991px) {
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 14px 36px;
+    }
+}
+
+/* ===== Mobile (≤ 767px) ===== */
+@media screen and (max-width: 767px) {
+    body {
+        justify-content: flex-start; /* remonte le contenu */
+        padding-top: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+        line-height: 1.4;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        font-size: 0.95rem;
+        padding: 14px 0;
+    }
+}
+
+/* ===== Très petits écrans (≤ 480px) ===== */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        letter-spacing: 1px;
+        margin-bottom: 50px;
+    }
+}
