@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BASE ================= */
+.back-icon {
+    position: absolute;
+    top: 20px;     
+    left: 20px;    
+    width: 75px; 
+    height: auto;
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.2));
+    transition: transform 0.3s ease;
+    cursor: pointer; 
+}
+.back-icon:hover {
+    transform: scale(1.1); /* Petit effet de zoom au survol */
+}
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #2a2a2a 0%, #000 65%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trade Winds', cursive;
+    color: #ffffff;
+    text-align: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+/* Spotlight fitness */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.08),
+        transparent 60%
+    );
+    pointer-events: none;
+}
+
+
+#food-search {
+    width: 80%;
+    padding: 15px;
+    background: #1a1a1a;
+    border: 2px solid #ffffff;
+    border-radius: 10px 30px 10px 30px; /* Bords asymétriques style courbe */
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+#results-list {
+    margin-top: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    width: 80%;
+}
+
+.food-item {
+    background: #262626;
+    margin: 5px 0;
+    padding: 12px;
+    border-radius: 5px 15px 5px 15px; /* Rappel du style courbe */
+    cursor: pointer;
+    transition: background 0.3s;
+    border-left: 4px solid #2ECC71; /* Petite barre verte sur le côté */
+}
+
+.food-item:hover {
+    background: #333333;
+}

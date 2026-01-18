@@ -1,0 +1,159 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BASE ================= */
+.back-icon {
+    position: absolute;
+    top: 20px;     
+    left: 20px;    
+    width: 75px; 
+    height: auto;
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.2));
+    transition: transform 0.3s ease;
+    cursor: pointer; 
+}
+.back-icon:hover {
+    transform: scale(1.1); /* Petit effet de zoom au survol */
+}
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #2a2a2a 0%, #000 65%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trade Winds', cursive;
+    color: #ffffff;
+    text-align: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+/* Spotlight fitness */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.08),
+        transparent 60%
+    );
+    pointer-events: none;
+}
+
+/* ================= TITRE ================= */
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+
+.controls {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+input {
+    width: 200px;
+    padding: 12px;
+    background: #000;
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 6px;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+.water-level {
+    color: #2ECC71; 
+    font-size: 3rem;
+    font-weight: bold; 
+    text-align: center;
+    text-shadow: 0 0 10px rgba(46, 204, 113, 0.3); 
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.buttons button {
+    background: #111;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 12px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+.buttons button:hover {
+    background: #fff;
+    color: #000;
+}
+.buttons button#add {
+    color: #000;
+    font-weight: bold;
+    background-color: #fff;
+}
+/* ================= Media Queries ================= */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .controls input {
+        width: 150px;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .buttons button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
+@media (max-height: 500px) {
+    body {
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    body{
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    .buttons {
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+    .buttons button {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+
