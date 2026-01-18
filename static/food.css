@@ -77,3 +77,89 @@ body::before {
 .food-item:hover {
     background: #333333;
 }
+
+.progress-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.progress-text {
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-family: 'Ta police Art Martial', sans-serif;
+}
+
+#current-kcal { font-size: 2.5rem; font-weight: bold; display: block; }
+
+.progress-ring__circle {
+    transition: stroke-dashoffset 0.5s ease;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke-dasharray: 502.65; /* Circonférence : 2 * π * 80 */
+    stroke-dashoffset: 502.65;
+    filter: drop-shadow(0 0 8px #2ECC71); /* Lueur sport */
+}
+
+.meal-card {
+    background: #1a1a1a;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 5px 25px 5px 25px; /* Tes courbes signature */
+    border-left: 3px solid #2ECC71;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.meal-time { color: #888; font-size: 0.8rem; display: block; }
+.meal-kcal { font-weight: bold; color: #2ECC71; }
+
+/* ================= Media Queries ================= */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .controls input {
+        width: 150px;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .buttons button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
+@media (max-height: 500px) {
+    body {
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    body{
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    .buttons {
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+    .buttons button {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
