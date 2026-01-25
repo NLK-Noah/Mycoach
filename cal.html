@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mycoach</title>
+    <link rel="stylesheet" href="static/food.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Tu as mangé quoi de bon ? 😃</h1>
+    <a href="Home.html" class="back-link">
+        <img src="static/back.png" alt="Retour" class="back-icon">
+    </a>
+    <div class="search-section">
+        <input type="text" id="food-search" placeholder="Rechercher un aliment (ex: Poulet, Riz...)" autocomplete="off">
+        <div id="results-list"></div>
+    </div>
+
+    <div id="selected-food-display" style="display:none;">
+        <h3 id="food-name"></h3>
+        <p><span id="food-cal"></span> kcal / 100g</p>
+        <button class="btn-add-calorie">AJOUTER</button>
+    </div>
+    <div class="dashboard">
+    <div class="progress-container">
+        <svg class="progress-ring" width="200" height="200">
+            <circle class="progress-ring__background" stroke="#333" stroke-width="12" fill="transparent" r="80" cx="100" cy="100"/>
+            <circle id="progress-bar" class="progress-ring__circle" stroke="#2ECC71" stroke-width="12" stroke-linecap="round" fill="transparent" r="80" cx="100" cy="100"/>
+        </svg>
+        <div class="progress-text">
+            <span id="current-kcal">0</span>
+            <small>/ 2000 kcal</small>
+        </div>
+    </div>
+    </div>
+    <div class="meal-history">
+    <h3>HISTORIQUE DU JOUR</h3>
+    <div id="meals-container">
+        <div class="meal-card">
+            <div class="meal-info">
+                <span class="meal-time">12:30</span>
+                <span class="meal-name">Poulet Grillé & Riz</span>
+            </div>
+            <span class="meal-kcal">+450 kcal</span>
+        </div>
+    </div>
+    </div>
+<script src="static/food.js"></script>
+</body>
+</html>    

@@ -9,17 +9,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <h1>Compteur d'eaux</h1>
+    <a href="Home.html" class="back-link">
+        <img src="static/back.png" alt="Retour" class="back-icon">
+    </a>
     <div class="container">
         <div class="water-glass" id="glass1">
             <div class="water-level" id="level1">0 ml</div>
         </div>
     </div>
+    <div class="controls">
+    <input type="number" id="amount" placeholder="Quantité (ml)" min="0">
+
     <div class="buttons">
-        <button >Ajouter</button>
-        <button >Retirer</button>
-        <button >Réinitialiser</button>
+        <button id="add">Ajouter</button>
+        <button id="remove">Retirer</button>
+        <button id="reset">Réinitialiser</button>
+        <button id="250">+ 250ml</button>
+        <button id="500">+ 500ml</button>
     </div>
+
+<script src="static/Water.js"></script>
+
 </body>
 </html>
